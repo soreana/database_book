@@ -140,3 +140,9 @@ Visit [*The Softcover Book*](http://manual.softcover.io) to learn more about wha
 [^sample-footnote]: This is a footnote. It is numbered automatically.
 
 [^pronunciation]: Pronunciations of "LaTeX" differ, but *lay*-tech is the one I prefer.
+
+
+## console
+```console
+$ find . \( -name \*.gemspec -or -name \*.jpg \) -type f
+```
