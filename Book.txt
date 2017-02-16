@@ -4,6 +4,6 @@ maketitle
 tableofcontents
 preface.md
 mainmatter:
+overview_of_database_system.md
 a_chapter.md
-another_chapter.md
 yet_another_chapter.md
