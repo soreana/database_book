@@ -4,6 +4,7 @@ maketitle
 tableofcontents
 preface.md
 mainmatter:
-overview_of_database_system.md
+01_overview_of_database_system.md
+02_introduction_to_database_design.md
 a_chapter.md
 yet_another_chapter.md
