@@ -30,13 +30,36 @@
     
     * **Physical Schema** :
     
+        The physical schema specifies additional storage details. Essentially, the physical schema summarizes how the 
+        relations described in the conceptual schema are actually stored on secondary storage devices such as disks and 
+        tapes. A sample physical schema for the university database follows:
+        
+        - Store all relations as unsorted files of records.
+        
+        - Create indexes \coloredtext{red}{TODO reference to it's definition} on the first column of the Students, Faculty, and Courses relations, the sal column of Faculty, and the capacity column of Rooms.
+        
+    * **External Schema**
+    
+        External schemas, which usually are also in terms of the data model of the DBMS, allow data access to be customized
+        (and authorized) at the level of individual users or groups of users.
+         
+        Any given database has exactly one conceptual schema and one physical schema because it has just one set of stored 
+        relations, but it may have several external schemas, each tailored to a particular group of users.
+        
+        Each external schema consists of a collection of one or more views and relations from the conceptual schema.
+        
+        A view is conceptually a relation, but the records in a view are not stored in the DBMS. Rather, they are computed 
+        using a definition for the view, in terms of relations stored in the DBMS. 
+        
+        A user can treat a view just like a relation and ask questions about the records in the view.
+    
 
 * **Record** : 
 
     Each row in the Students relation is a record that describes a student.
 
 |**sid** | **name** | **login** | **age** | **gpa** |
-|---------|---------|---------|---------|---------|
+|--------|----------|-----------|---------|---------|
 | 53666 | منگول | mangul@shangulabad.com | 18 | 3.5 |
 | 53686 | شنگول | shangul@shangulabad.com | 17 | 3.2 |
 | 53662 | حبه انگور‍ | habbeAngura@shangulabad.com | 13 | 2.8 |
