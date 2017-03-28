@@ -6,5 +6,6 @@ preface.md
 mainmatter:
 01_overview_of_database_system.md
 02_introduction_to_database_design.md
+03_the_relational_model.md
 a_chapter.md
 yet_another_chapter.md
