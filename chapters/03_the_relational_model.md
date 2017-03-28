@@ -60,6 +60,68 @@ per relation schema in the database schema.
     
 \coloredtext{red}{TODO: provide example used SQL field number rather than name.}
 
-## Creating and Modifying Relations Using SQL
+## Useful SQL Queries
+
+\begin{codelisting}
+\codecaption{Creat Table}
+\label{code:hello}
+```sql
+CREATE TABLE Students ( sid CHAR(20), name CHAR(30), login CHAR(20),
+                        age INTEGER, gpa REAL )
+```
+\end{codelisting}
+
+\begin{codelisting}
+\codecaption{Insert with list of column names}
+\label{code:hello}
+```sql
+INSERT
+INTO Students (sid, name, login, age, gpa)
+VALUES (53688, 'Smith', 'smith@ee', 18, 3.2)
+```
+\end{codelisting}
+
+\begin{codelisting}
+\codecaption{Insert without list of column names}
+\label{code:hello}
+```sql
+INSERT 
+INTO Students
+VALUES (53688, 'Smith', 'smith@ee', 18, 3.2)
+```
+\end{codelisting}
+
+\begin{codelisting}
+\codecaption{Delete all Students tuples with name equal to 'Smith'}
+\label{code:hello}
+```sql
+DELETE
+FROM Students S
+WHERE S.name = 'Smith'
+```
+\end{codelisting}
+
+\begin{codelisting}
+\codecaption{}
+\label{code:hello}
+```sql
+UPDATE Students S
+SET S.age = S.age + 1, S.gpa = S.gpa - 1 
+WHERE S.sid = 53688
+```
+\end{codelisting}
+
+This example illustrate some important points. The WHERE clause is applied first and determines which rows are to 
+be modified. The SET clause then determines how these rows are to be modified. If the column being modified is also 
+used to determine the new value, the value used in the expression on the right side of equals (=) is the old value, 
+that is, before the modification.
+
+
+\begin{codelisting}
+\codecaption{}
+\label{code:hello}
+```sql
+```
+\end{codelisting}
 
 [^sample-footnote]: In practice, commercial systems allow tables to have duplicate rows, but we assume that a relation is indeed a set of tuples unless otherwise noted.
